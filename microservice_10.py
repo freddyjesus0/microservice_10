@@ -20,7 +20,6 @@ def consulta_producto_proveedor():
         try:
 
             dynamodb = boto3.client('dynamodb',aws_access_key_id=os.environ.get('aws_access_key_id'), aws_secret_access_key=os.environ.get('aws_access_key_secret'), region_name=os.environ.get('region'))
-            #dynamodb = boto3.client('dynamodb',aws_access_key_id="AKIAIQCRHLBZV3V555MQ", aws_secret_access_key="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", region_name="us-east-1") 
 
             proveedor_id = request.args.get('id_proveedor')
             #product = dynamodb.get_item(
